@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    grid-template-areas:
+            "header header"  /*header will take up the two columns*/
+            "items items"  /*items will take up the two columns*/
+            "article aside" /*the article column will take up 75% and the aside is 25%*/
+            "footer footer"; /*footer will take up the two columns*/
+    grid-template-columns: 3fr 1fr;  /*75%-25%*/
+    grid-gap: 3px;   /*small gap between rows*/
+    border: 1px solid black; /*border around container*/
+}
+
+header,section, article,aside,footer
+{
+    background-color: #d0cfc6;   /*used color from the png*/
+    padding-left: 10px;      /*small padding to adjust list*/
+    padding-top: 20px;
+}
+header {                     /*uses header section*/
+    grid-area: header;
+
+
+
+}
+
+section {
+    grid-area: items;    /*uses items section*/
+    background-color: #0072cb;  /*used color from png*/
+    padding:10px;
+
+}
+article {
+    grid-area: article;      /*uses article section*/
+    padding-bottom: 30px;
+}
+
+aside {
+    grid-area: aside;   /*uses aside section*/
+}
+span{                         /*to adjust the text. I used span on each seperate "line'
+                               so the underline would only stay on the text*/
+    text-decoration-line: underline;
+    color:white
+}
+
+footer {
+    grid-area: footer;   /*uses section for footer*/
+}
+
+body{
+    background-color: #f2f2f2;      /*uses color from png*/
+}

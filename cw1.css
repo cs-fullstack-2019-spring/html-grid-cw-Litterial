@@ -1,0 +1,43 @@
+body{
+    margin: 1.5% 15%;     /*margins*/
+}
+div{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:"Header Header Header"
+"Nav Section Aside"                                       /*uses grid-template areas method*/
+"Footer Footer Footer";
+grid-gap:10px;
+
+}
+header,nav,section,aside,footer{                           /*size adjustments on footer and header*/
+    padding-bottom:150px;
+    padding-top:10px;
+    padding-left: 10px;
+}
+header,footer{
+    background-color: #707070;                                      /*copying colors*/
+}
+header{
+    grid-area: Header;
+
+}
+nav{                                                                       /*nav takes up 20%*/
+    grid-area: Nav;
+    background-color: #cabfbf;                                     /*copied colors*/
+}
+section{                                                            /*section takes up 80%*/
+    grid-area: Section;
+    background-color: #ababab;                                     /*copied colors*/
+}
+aside{
+    grid-area:Aside;                                                          /*aside takes up 20%*/
+    background-color: #c9c9c9                                          /*copied colors*/
+}
+footer{
+    grid-area:Footer
+}
+
+span{
+    font-size: xx-large;
+}
